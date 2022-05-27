@@ -19,6 +19,7 @@ docker pull davma/python-pyodbc
 You can run the image build with the following commands
 
 ````
+git clone https://github.com/davma-io-images/python-pyodbc.git
 cd python-pyodbc
 docker build -t python-pyodbc .
 ````
