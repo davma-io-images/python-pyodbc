@@ -1,6 +1,6 @@
 ## 1. Introduction
 
-Python 3.8 image with pyodbc == 4.0.30
+Python official image with pyodbc == 4.0.30
 
 ## 2. Requirements
 
@@ -11,7 +11,13 @@ Python 3.8 image with pyodbc == 4.0.30
 You can download the full image from [Docker Hub](https://hub.docker.com/) with the following command.
 
 ````
-docker pull davma/python-pyodbc
+docker pull davma/python-pyodbc:latest
+````
+````
+docker pull davma/python-pyodbc:3.8
+````
+````
+docker pull davma/python-pyodbc:3.7
 ````
 
 ## 4. Image build
