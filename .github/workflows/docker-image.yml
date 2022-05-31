@@ -42,4 +42,4 @@ jobs:
           file: ./Dockerfile
           push: true
           repository: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc
-          tags: ${{ matrix.tag}
+          tags: ${{ matrix.tag}}
