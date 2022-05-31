@@ -1,4 +1,6 @@
-FROM python:latest
+ARG IMAGE
+
+FROM ${IMAGE} as parent
 
 WORKDIR /sqlpyodbc
 

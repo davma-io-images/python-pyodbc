@@ -1,6 +1,6 @@
 ## 1. Introduction
 
-Python official image with pyodbc == 4.0.30
+Python official images with pyodbc == 4.0.30
 
 ## 2. Requirements
 
@@ -12,6 +12,9 @@ You can download the full image from [Docker Hub](https://hub.docker.com/) with 
 
 ````
 docker pull davma/python-pyodbc:latest
+````
+````
+docker pull davma/python-pyodbc:3.9
 ````
 ````
 docker pull davma/python-pyodbc:3.8
@@ -31,5 +34,7 @@ docker build -t python-pyodbc .
 ````
 
 ## 5.Documentation and guides
+
+[pyodbc](https://pypi.org/project/pyodbc/)
 
 [Microsoft ODBC 17](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017)
