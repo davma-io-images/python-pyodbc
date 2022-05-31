@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - 'main'
-    paths:
-      - "*"
-      - "!README.md"
-      - "!build.rb"
+#     paths:
+#       - "*"
+#       - "!README.md"
+#       - "!build.rb"
   schedule:
     - cron: "0 0 * * 0-6"
 jobs:
