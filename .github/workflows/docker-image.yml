@@ -41,4 +41,5 @@ jobs:
           build_args: IMAGE=${{ matrix.base}}
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag}
+          repository: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc
+          tags: ${{ matrix.tag}
