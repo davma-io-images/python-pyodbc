@@ -15,10 +15,10 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: ubuntu
-            tag: latest
-          - base: ubuntu
-            tag: 3.9
+          - base: ubuntu:latest
+#             tag: latest
+          - base: ubuntu:3.9
+#             tag: 3.9
 
     steps:
       -
@@ -42,4 +42,4 @@ jobs:
           file: ./Dockerfile
           push: true
 #           repository: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag}}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.base}}
