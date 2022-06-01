@@ -1,6 +1,6 @@
 ARG IMAGE
 
-FROM ${IMAGE} as parent
+FROM ${IMAGE}
 
 WORKDIR /sqlpyodbc
 

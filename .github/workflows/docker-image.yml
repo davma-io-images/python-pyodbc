@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - 'main'
-#     paths:
-#       - "*"
-#       - "!README.md"
-#       - "!build.rb"
+    paths:
+      - "*"
+      - "!README.md"
+      - "!build.rb"
   schedule:
     - cron: "0 0 * * 0-6"
 jobs:
@@ -16,9 +16,11 @@ jobs:
       matrix:
         include:
           - base: ubuntu:latest
-            tag: ubuntu-latest
+            tag: latest
+            # target: linux
           - base: ubuntu:3.9
-            tag: ubuntu-3.9
+            tag: 3.9
+            # target: linux
 
     steps:
       -
@@ -36,11 +38,12 @@ jobs:
       -
         name: Build and push
         uses: docker/build-push-action@v2
+        env: 
+          IMAGE: ${{ matrix.base }}
         with:
           context: .
-          images: ${{ matrix.base }}
-          args: IMAGE=${{ matrix.base }}
+          build_args: IMAGE=${{ matrix.base }}
+          target: ${{ matrix.target}
           file: ./Dockerfile
           push: true
-#         repository: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag}
