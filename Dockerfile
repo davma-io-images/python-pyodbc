@@ -1,6 +1,7 @@
 ARG IMAGE
+ARG TAG
 
-FROM ${IMAGE}
+FROM ${IMAGE}:${TAG}
 
 WORKDIR /sqlpyodbc
 
