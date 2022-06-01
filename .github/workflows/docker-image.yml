@@ -17,10 +17,8 @@ jobs:
         include:
           - base: ubuntu:latest
             tag: latest
-            # target: linux
           - base: ubuntu:3.9
             tag: 3.9
-            # target: linux
 
     steps:
       -
@@ -43,7 +41,6 @@ jobs:
         with:
           context: .
           build_args: IMAGE=${{ matrix.base }}
-          target: ${{ matrix.target}
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag}
