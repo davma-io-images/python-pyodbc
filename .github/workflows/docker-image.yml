@@ -43,4 +43,3 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag }}
           build-args: |
             IMAGE=${{ matrix.base }}
-            TAG=${{ matrix.tag }}
