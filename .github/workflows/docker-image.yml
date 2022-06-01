@@ -15,9 +15,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: python
+          - base: python:latest
             tag: latest
-          - base: python
+          - base: python:3.9
             tag: 3.9
 
     steps:
