@@ -15,9 +15,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: ubuntu
+          - base: python
             tag: latest
-          - base: ubuntu
+          - base: python
             tag: 3.9
 
     steps:
