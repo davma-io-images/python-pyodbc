@@ -15,9 +15,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - base: ubuntu:latest
+          - base: ubuntu
             tag: latest
-          - base: ubuntu:3.9
+          - base: ubuntu
             tag: 3.9
 
     steps:
@@ -36,11 +36,9 @@ jobs:
       -
         name: Build and push
         uses: docker/build-push-action@v2
-        env: 
-          IMAGE: ${{ matrix.base }}
         with:
           context: .
-          build_args: IMAGE=${{ matrix.base }}
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag}}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/python-pyodbc:${{ matrix.tag }}
+          build-args: IMAGE=${{ matrix.base }}:${{ matrix.tag }}
