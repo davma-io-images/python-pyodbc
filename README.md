@@ -2,6 +2,8 @@
 
 Python official images with pyodbc == 4.0.30
 
+[![Build and push images](https://github.com/davma-io-images/python-pyodbc/actions/workflows/docker-image.yml/badge.svg)](https://github.com/davma-io-images/python-pyodbc/actions/workflows/docker-image.yml)
+
 ## 2. Requirements
 
 1. [Docker](https://docs.docker.com/get-docker/)

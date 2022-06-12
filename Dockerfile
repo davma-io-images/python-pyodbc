@@ -16,6 +16,6 @@ RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
 RUN ACCEPT_EULA=Y apt-get install -y mssql-tools
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 #RUN source ~/.bashrc
-# optional: for unixODBC development headers
+#optional: for unixODBC development headers
 RUN apt-get install -y unixodbc-dev
 RUN pip install pyodbc==4.0.30
