@@ -17,7 +17,7 @@ jobs:
         include:
           - base: python:latest
             tag: latest
-          - base: python:3.11
+          - base: python:3.11.0b3-bullseye
             tag: 3.11
           - base: python:3.9
             tag: 3.9
