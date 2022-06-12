@@ -12,11 +12,6 @@ Python official images with pyodbc == 4.0.30
 
 You can download the full image from [Docker Hub](https://hub.docker.com/) with the following command.
 
-
-````
-#python3.11
-docker pull davma/python-pyodbc:3.11
-````
 ````
 #python3.10
 docker pull davma/python-pyodbc:latest
